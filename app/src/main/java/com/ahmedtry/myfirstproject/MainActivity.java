@@ -59,10 +59,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void next(View view) {
-        Drawable placesDrawable = ContextCompat.getDrawable(this, mPlacePics[++mCorentIndex]);
+        ++mCorentIndex;
+        Drawable placesDrawable = ContextCompat.getDrawable(this, mPlacePics[mCorentIndex]);
         placesImage.setImageDrawable(placesDrawable);
 
-        if (mCorentIndex == mPlacePics.length) {
+        if (mCorentIndex == 6 ) {
             mCorentIndex = 0;
         } //ifstatment
     }  //NextBtn
